@@ -1,0 +1,35 @@
+const getProbability = () => {
+    let left = [];
+    let middle = [];
+    let right = [];
+    for (let k = minSum; k < middleTerm[0]; k++) {
+      left = ((k - 1) / totalEvents) * 100;
+      result.push(left);
+    }
+
+    let midNum = middleTerm;
+
+    // for (let a = 1; a <= midNum.length; a++) {
+    //   middle = (a - 1 / totalEvents) * 100;
+    //   result.push(middle);
+    //   console.log(result);
+    // }
+    midNum.forEach(item => {
+      item = ((midNum[0] - 1) / totalEvents) * 100;
+      result.push(item);
+    });
+
+    for (let i = middleTerm[0] - 1; i >= minSum; i--) {
+      right = ((i - 1) / totalEvents) * 100;
+      result.push(right);
+    }
+
+    return result;
+  };
+  getProbability();
+
+  result.forEach(item => {
+    console.log(item);
+    let res = Math.max(item);
+    console.log(res);
+  });
